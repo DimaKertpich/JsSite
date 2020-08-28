@@ -1,0 +1,165 @@
+@import 'mixin';
+@import 'varb';
+
+//=== Header Menu
+
+.headerMenu{
+    position: fixed;
+    width: 100%;
+    z-index: 2000;
+    top: 0;
+    left: 0;
+    background: transparent;
+    padding: 50px 0 0 0;
+    transition: .3s ease-in-out;
+    
+    ul{
+        
+        padding: 0;
+        list-style: none;
+        
+        
+        li{
+            display: inline;
+            cursor: pointer;
+
+            a{
+                text-decoration: none;
+                color: $colorTextMenu;
+                transition: .1s ease-in-out;
+
+                &:hover { 
+                    color: $colorHoverText;
+                    transition: .1s ease-in-out;
+                }
+            }
+        }
+
+    }
+
+
+    &__left{
+
+        padding-top: 5px;
+
+          ul{
+            li:nth-child(2){
+                padding-left: 30px;
+            }
+
+            li:nth-child(4),
+            li:nth-child(3){
+                padding-left: 40px;
+            }
+          }
+        
+    }
+
+   &__center{
+       padding-top: 5px;
+   }
+
+    &__right{
+        
+
+        ul{
+           
+            li:nth-child(1){
+                padding-right: 30px;
+            }
+
+            li:nth-child(2){
+                padding-right: 30px;
+            }
+        }
+
+        button{
+            
+            @include btn(132px, 42px, $colorHoverText, 20px);
+            
+            .getApp{
+                color: $colorWhite;
+            
+            }
+
+            .getApp:hover{
+                color: $colorWhite;
+            }
+
+            .apple{
+                font-size: 20px;
+                margin: 0 10px 0 0;
+            }
+            
+        }
+
+        .help{
+            color: $colorHelp;
+        }
+        
+    }
+}
+
+.shadow{
+    padding: 30px 0 10px 0;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.15);
+    transition: .3s ease-in-out;
+    background: $colorWhite;
+}
+
+//=== Header 
+
+.header{
+    width: 100%;
+    height: 100vh;
+    background: url('../images/banner_background.jpg') center center no-repeat;
+    padding: 0 0 1000px 0;
+    position: relative;
+    overflow: hidden;
+
+    &__text{
+        padding-top: 200px;
+
+        h3{
+            @include varela;
+
+            font-size: 58px;
+            color: $colorTextMenu;
+        }
+        
+        p{
+            @include latoRegular;
+            @include text(20px);
+
+            padding-top: 20px;
+        }
+    }
+
+    &__btn{
+
+        padding-top: 44px;
+
+        button{
+           @include latoRegular;
+           @include btn(192px, 48px, transparent, 25px);
+
+           color: $colorTextMenu;
+           border: 1px solid $colorBorderHeader;
+
+           .playVideo{
+               font-size: 14px;
+               margin-right: 15px;
+           }
+        }
+    }
+
+    &__iphone{
+
+        img{
+            position: absolute;
+            left: 50%;
+            bottom: -300px;
+            margin-left: -184px;
+        }
+    }
+}
