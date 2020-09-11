@@ -163,3 +163,36 @@
         }
     }
 }
+
+
+// Features
+
+.features{
+
+    &__block-text{
+        margin-top: 120px;
+    }
+
+    &__item{
+        
+        font-size: 40px;
+        color: $colorHoverText;
+    }
+
+    &__text{
+
+        margin-top: 40px;
+
+        h4{
+            @include latoLight;
+            color: $colorTextMenu;
+        }
+
+        p{
+            @include latoRegular;
+            @include text(18px);
+
+            margin-top: 50px;
+        }
+    }
+}
