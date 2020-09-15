@@ -196,3 +196,115 @@
         }
     }
 }
+
+.line{
+    width: 100%;
+    height: 1px;
+    background: $divLine;
+    margin-top: 80px;
+}
+
+// Iphone
+
+.iphone{
+    overflow: hidden;
+    padding: 260px 0 230px 0;
+
+    &__block{
+        
+        h3{
+            @include varela;
+
+            font-size: 42px;
+            color: $colorTextMenu;
+        }
+    }
+
+    &__text{
+        @include latoRegular;
+        @include text(20px); 
+
+        margin-top: 50px;
+    }
+
+    &__btn{
+
+        margin-top: 60px;
+
+        .try{
+            @include btn(200px, 42px, $colorHoverText, 20px);
+            @include latoRegular;
+            
+            font-size: 16px;
+            color: $colorWhite;
+            border: none;
+
+            .btnArrow{
+                font-size: 14px;
+                margin-left: 24px;
+                
+            }
+        }
+
+        .learnMore{
+            @include btn(140px, 40px, transparent, 20px);
+            @include latoRegular;
+
+            border: 1px solid $borderLineBtn;
+            margin-left: 20px;
+        }
+    }
+
+    &__phone{
+        position: relative;
+        
+        img{
+            position: absolute;
+            top: -150px;
+            left: -320px;
+        }
+    }
+}
+
+// Map
+
+.map{
+    overflow: hidden;
+    padding: 100px 0 200px 0;
+
+    &__block{
+
+        h3{
+            @include varela;
+
+            font-size: 42px;
+            color: $colorTextMenu;
+        }
+    }
+
+    &__text{
+        @include latoRegular;
+        @include text(20px); 
+
+        margin-top: 50px;
+    }
+
+    &__map{
+        position: relative;
+        
+        img{
+            position: absolute;
+            top: -500px;
+            right: -370px;
+        }
+    }
+
+    &__partners{
+        @include latoBold;
+
+        font-size: 12px;
+        text-transform: uppercase;
+        color: $colorTextMenu;
+        padding: 50px 0 30px;
+    }
+}
