@@ -383,3 +383,100 @@
    }
 
 }
+
+// ReadyToBuy
+
+.readyToBuy{
+    padding: 140px 0 140px;
+    background: $screensBg;
+
+    &__newProvidence{
+        @include latoBold;
+
+        font-size: 12px;
+        color: $newProvidence;
+        text-transform: uppercase;
+
+        span{
+            @include latoRegular;
+        }
+    }
+
+    &__block{
+
+        h3{
+            @include varela;
+
+            font-size: 42px;
+            color: $colorTextMenu;
+        }
+    }
+
+    &__input{
+        position: relative;
+        padding-top: 34px;
+        
+        input{
+            @include latoRegular;
+            @include input(500px, 48px);
+        }
+
+        button{
+            @include btn(164px, 42px, $btnColor, 25px);
+            @include latoRegular;
+            
+            position: absolute;
+            color: $colorWhite;
+            border: none;
+            top: 36px;
+            right: 24px;
+        }
+
+        .inputArrow{
+            font-size: 14px;
+            margin-left: 10px;
+        }
+    }
+
+    &__btn{
+        margin-top: 66px;
+
+        button{
+            @include btn(210px, 60px, $backBtn, 25px);
+            @include latoRegular;
+
+            position: relative;
+            color: $colorWhite;
+            border: 1px solid $backBtn;
+
+            .readyToBuyApple{
+                position: absolute;
+                font-size: 36px;
+                top: 9px;
+                left: 20px;
+            }
+
+            .downloadOnThe{
+                position: absolute;
+                font-size: 12px;
+                top: 10px;
+                left: 68px;
+            }
+
+            .appStore{
+                position: absolute;
+                font-size: 22px;
+                top: 20px;
+                left: 68px;
+            }
+        }
+    }
+
+    &__download{
+        @include latoRegular;
+
+        font-size: 12px;
+        text-transform: uppercase;
+        color: $borderInput;
+    }
+}
