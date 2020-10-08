@@ -3,6 +3,11 @@ let nextImg = document.querySelector('.customers__arrowUseNext');
 let prevImg = document.querySelector('.customers__arrowUsePrev');
 let imgAll = document.querySelectorAll('div.customers__users > img');
 let blockText = document.querySelectorAll('div.customers__blockText > p');
+let btnIndividual = document.querySelector('.plan__individual');
+let btnCompany = document.querySelector('.plan__company');
+let afterBlock = document.querySelector('.plan__btnToggle');
+let blockIndividual = document.querySelector('.plan__blockIndividual');
+let blockCompany = document.querySelector('.plan__blockCompany');
 
 let currentImg = 1;
 
@@ -78,3 +83,18 @@ prevImg.addEventListener('click', function(){
     
 });
 
+//--- Вибір плану
+
+// Перемикач секції Plan
+
+btnIndividual.addEventListener('click', function(){
+    afterBlock.classList.remove('activeBtnPlan');
+    blockIndividual.classList.remove('deactivated');
+    blockCompany.classList.add('deactivated');
+});
+
+btnCompany.addEventListener('click', function(){
+    afterBlock.classList.add('activeBtnPlan');
+    blockIndividual.classList.add('deactivated');
+    blockCompany.classList.remove('deactivated');
+});

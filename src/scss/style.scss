@@ -487,11 +487,14 @@
 
     padding: 130px 0 110px;
 
-    &__users-img{
-        width: 90px;
-        border-radius: 50%;
-        opacity: 0.6;
-        transition: .3s ease-in-out;
+    &__users{
+        
+        img{
+            width: 90px;
+            border-radius: 50%;
+            opacity: 0.6;
+            transition: .3s ease-in-out;
+        }
     }
 
     .imgUserOne{
@@ -503,6 +506,7 @@
     }
 
     .activeImg{
+        width: 100px;
         margin-top: -10px;
         opacity: 1;
         box-shadow: 10px 10px 8px 8px rgba(0, 0, 0, 0.15);
@@ -560,6 +564,166 @@
             margin-top: 60px;
             color: $colorTextMenu;
         }
+    }
+
+}
+
+// Plan
+
+.plan{
+    padding: 160px 0px 170px;
+    background: $backColorPlan;
+
+    &__choosePlan{
+
+            h3{
+                @include varela;
+    
+                font-size: 42px;
+                color: $colorTextMenu;
+            }
+    
+            .youAre{
+                @include latoBold;
+    
+                font-size: 12px;
+                text-transform: uppercase;
+                margin: 60px 0 16px;
+            }
+        
+    }
+
+    &__btnToggle{
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 258px;
+        height: 48px;
+        border: 1px solid $btnTogglePlan;
+        border-radius: 25px;
+    }
+
+    &__btnToggle:after{
+        content: '';
+        display: flex;
+        width: 124px;
+        height: 42px;
+        background: $colorWhite;
+        border-radius: 25px;
+        position: absolute;
+        left: 5px;
+        box-shadow: 6px 4px 12px 2px rgba(0, 0, 0, 0.15);
+        cursor: pointer;
+        transition: .3s ease-in-out;
+    }
+
+    &__btnToggle.activeBtnPlan:after{
+        left: 128px;
+        transition: .3s ease-in-out;
+    }
+
+    &__individual,
+    &__company{
+        @include latoRegular;
+
+        z-index: 10;
+        cursor: pointer;
+    }
+
+    &__blockText{
+        
+        margin-top: 74px;
+
+        .text{
+            @include latoRegular;
+            @include text(20px);
+        }
+
+        .link{
+            @include latoRegular;
+            @include text(14px);
+
+            margin-top: 35px;
+            a{
+                margin-left: 4px;
+            }
+        }
+    }
+
+    .da{
+        height: 200px;
+    }
+
+    &__blockIndividual,
+    &__blockCompany{
+       
+        padding: 60px 0px 70px;
+        background: $colorWhite;
+        box-shadow: 10px 10px 10px 1px rgba(0, 0, 0, 0.15);
+        transition: .3s ease-in-out;
+        z-index: 10;
+
+        h4{
+            @include latoLight;
+
+            font-size: 32px;
+            color: $colorTextMenu;
+            margin-bottom: 20px;
+        }
+
+        .pay,
+        .free{
+            @include latoBold;
+
+            font-size: 11px;
+            text-transform: uppercase;
+            color: $colorTextMenu;
+            border: 1px solid $customersArrow;
+            border-radius: 20px;
+            padding: 8px 18px;
+        }
+
+        .description{
+            @include latoRegular;
+            @include text(20px);
+            
+            margin-top: 44px;
+        }
+
+        .opportunities{
+            @include latoRegular;
+
+            color: $planOpportunities;
+            margin-top: 30px;
+            line-height: 40px;
+
+            .checkOpportunities{
+                margin-right: 10px;
+                color: $btnColor;
+            }
+        }
+
+        button{
+            @include btn(212px, 42px, $colorHoverText, 25px);
+            @include latoRegular;
+
+            margin-top: 50px;
+            color: $colorWhite;
+            border: none;
+        }
+
+        #btnMargPlan{
+            margin-top: 10px;
+        }
+
+    }
+
+    .deactivated{
+        margin: 10px 0 10px;
+        background: $deActivated;
+        transition: .3s ease-in-out;
+        z-index: 5;
     }
 
 }
