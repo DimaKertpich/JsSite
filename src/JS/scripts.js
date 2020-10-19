@@ -8,6 +8,8 @@ let btnCompany = document.querySelector('.plan__company');
 let afterBlock = document.querySelector('.plan__btnToggle');
 let blockIndividual = document.querySelector('.plan__blockIndividual');
 let blockCompany = document.querySelector('.plan__blockCompany');
+let textIndividual = document.querySelector('.plan__individual');
+let textCompany = document.querySelector('.plan__company');
 
 let currentImg = 1;
 
@@ -91,10 +93,14 @@ btnIndividual.addEventListener('click', function(){
     afterBlock.classList.remove('activeBtnPlan');
     blockIndividual.classList.remove('deactivated');
     blockCompany.classList.add('deactivated');
+    textIndividual.classList.add('toggleTextBtnPlan');
+    textCompany.classList.remove('toggleTextBtnPlan');
 });
 
 btnCompany.addEventListener('click', function(){
     afterBlock.classList.add('activeBtnPlan');
     blockIndividual.classList.add('deactivated');
     blockCompany.classList.remove('deactivated');
+    textCompany.classList.add('toggleTextBtnPlan');
+    textIndividual.classList.remove('toggleTextBtnPlan');
 });
